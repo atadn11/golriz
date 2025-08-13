@@ -2,7 +2,7 @@
 <html lang="fa">
 <head>
   <meta charset="utf-8" />
-  <title>س?‌گل</title>
+  <title>سی‌گل</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <style>
     :root{
@@ -32,15 +32,15 @@
       text-align:center;
     }
 
-    /* عنوان بالا? صفحه (ثابت، بدون ان?م?شن) */
+    /* عنوان بالای صفحه (ثابت، بدون انیمیشن) */
     #sigolText{
-      font-size:64px;           /* سا?ز بزرگ‌تر برا? موبا?ل و دسکتاپ */
+      font-size:64px;           /* سایز بزرگ‌تر برای موبایل و دسکتاپ */
       color: #00796b;
       margin:0 0 26px 0;
       user-select:none;
     }
 
-    /* تصو?ر (بعد از 3 ثان?ه ظاهر م?‌شود) */
+    /* تصویر (بعد از 3 ثانیه ظاهر می‌شود) */
     img{
       width:100%;
       border-radius:14px;
@@ -51,7 +51,7 @@
       margin-bottom:30px;
     }
 
-    /* گروه دکمه‌ها در ?ک رد?ف، فاصله ب?ن ادامه و شروع مجدد */
+    /* گروه دکمه‌ها در یک ردیف، فاصله بین ادامه و شروع مجدد */
     .button-group{
       display:flex;
       gap:16px;
@@ -66,28 +66,28 @@
     /* دکمه‌ها بلندتر و خوانا */
     .button-group button{
       flex:1;
-      min-height:64px;            /* بلند? دکمه */
-      padding:12px 18px;          /* فاصله داخل? افق?/عمود? */
-      font-size:20px;            /* کم? بزرگ‌تر */
+      min-height:64px;            /* بلندی دکمه */
+      padding:12px 18px;          /* فاصله داخلی افقی/عمودی */
+      font-size:20px;            /* کمی بزرگ‌تر */
       border-radius:12px;
       border: none;
       background: var(--main);
       color:#fff;
       cursor:pointer;
       transition: background 200ms ease, transform 120ms ease;
-      line-height:1;             /* برا? تراز عمود? بهتر */
+      line-height:1;             /* برای تراز عمودی بهتر */
     }
 
     .button-group button:hover{ background: var(--main-dark); transform: translateY(-2px); }
 
-    /* وقت? active شد، تصو?ر و دکمه‌ها نما?ان م?شن */
+    /* وقتی active شد، تصویر و دکمه‌ها نمایان میشن */
     .active img{ opacity:1; transform: scale(1); }
     .active .button-group{ opacity:1; pointer-events:auto; }
 
-    /* دکمه توقف را مخف? م?‌کن?م تا فقط بسته به وضع?ت نما?ش داده شود */
+    /* دکمه توقف را مخفی می‌کنیم تا فقط بسته به وضعیت نمایش داده شود */
     #stopButton{ display:none; }
 
-    /* حالت واکنشگرا: در موبا?ل فونت و اندازه دکمه ها کم? کمتر شود */
+    /* حالت واکنشگرا: در موبایل فونت و اندازه دکمه ها کمی کمتر شود */
     @media (max-width:420px){
       #sigolText{ font-size:48px; margin-bottom:18px; }
       .button-group button{ min-height:56px; font-size:18px; padding:10px 12px; }
@@ -98,16 +98,16 @@
 <body>
 
   <div class="container">
-    <!-- عنوان بالا? صفحه؛ از زِرو-وا?د-نو-جو?ِنر ب?ن س? و گل استفاده شده -->
-    <h1 id="sigolText">س?‌گل</h1>
+    <!-- عنوان بالای صفحه؛ از زِرو-واید-نو-جویِنر بین سی و گل استفاده شده -->
+    <h1 id="sigolText">سی‌گل</h1>
 
-    <!-- تصو?ر: ابتدا مخف?، بعد از 3 ثان?ه با زوم به نما?ش درم?‌آ?د -->
-    <img id="heroImg" src="https://atadn11.github.io/golriz/img.jpg" alt="س?‌گل">
+    <!-- تصویر: ابتدا مخفی، بعد از 3 ثانیه با زوم به نمایش درمی‌آید -->
+    <img id="heroImg" src="https://i.ibb.co/9kmxVLrv/photo-2025-08-11-18-29-27.jpg" alt="سی‌گل">
 
-    <!-- گروه دکمه‌ها: ترت?ب در DOM به ا?ن شکله که وقت? توقف رو م?‌زن?م،
-         ادامه (سمت چپ) و شروع مجدد (سمت راست) به صورت قابل کل?ک باق? م?‌مونن -->
+    <!-- گروه دکمه‌ها: ترتیب در DOM به این شکله که وقتی توقف رو می‌زنیم،
+         ادامه (سمت چپ) و شروع مجدد (سمت راست) به صورت قابل کلیک باقی می‌مونن -->
     <div class="button-group" id="buttonGroup">
-      <button id="continueButton" onclick="continueAudio()">ادامه‌? صدا</button>
+      <button id="continueButton" onclick="continueAudio()">ادامه‌ی صدا</button>
       <button id="playButton" onclick="playAudio()">شنيدن صدا</button>
       <button id="stopButton" onclick="stopAudio()">توقف صدا</button>
       <button id="restartButton" onclick="restartAudio()">شروع مجدد</button>
@@ -115,12 +115,12 @@
   </div>
 
   <audio id="audio">
-    <source src="https://atadn11.github.io/golriz/music.mp3" type="audio/mpeg">
-    مرورگر شما از پخش صدا پشت?بان? نم?‌کند.
+    <source src="https://atadn11.github.io/musicssigolpro/song2.mp3" type="audio/mpeg">
+    مرورگر شما از پخش صدا پشتیبانی نمی‌کند.
   </audio>
 
   <script>
-    // توجه: همه‌? متن‌ها? فارس? با حرف ? فارس? (U+06CC) نوشته شده‌اند
+    // توجه: همه‌ی متن‌های فارسی با حرف ی فارسی (U+06CC) نوشته شده‌اند
     const container = document.querySelector('.container');
     const buttonGroup = document.getElementById('buttonGroup');
     const heroImg = document.getElementById('heroImg');
@@ -133,11 +133,11 @@
 
     let pauseTime = 0;
 
-    // ابتدا فقط play (شن?دن صدا) قابل مشاهده باشد — بق?ه با JS کنترل م?شه
-    // (ظاهرشدن گروه دکمه‌ها و تصو?ر بعد از 3 ثان?ه)
+    // ابتدا فقط play (شنیدن صدا) قابل مشاهده باشد — بقیه با JS کنترل میشه
+    // (ظاهرشدن گروه دکمه‌ها و تصویر بعد از 3 ثانیه)
     setTimeout(() => {
       container.classList.add('active');
-      // نما?ش اول?ه: فقط دکمه‌? شن?دن فعال باشه
+      // نمایش اولیه: فقط دکمه‌ی شنیدن فعال باشه
       playButton.style.display = 'inline-block';
       stopButton.style.display = 'none';
       continueButton.style.display = 'none';
@@ -146,9 +146,9 @@
 
     // عملکردها
     function playAudio(){
-      // وقت? شن?دن صدا کل?ک شد، از جا? توقف قبل? ادامه بده
+      // وقتی شنیدن صدا کلیک شد، از جای توقف قبلی ادامه بده
       audio.currentTime = pauseTime || 0;
-      audio.play().catch(()=>{/* برخ? مرورگرها ممکنه جلو? autoplay بگ?رن */});
+      audio.play().catch(()=>{/* برخی مرورگرها ممکنه جلوی autoplay بگیرن */});
       playButton.style.display = 'none';
       stopButton.style.display = 'inline-block';
       continueButton.style.display = 'none';
@@ -158,16 +158,16 @@
     function stopAudio(){
       audio.pause();
       pauseTime = audio.currentTime;
-      // بعد از توقف: نما?ش دکمه ادامه‌? صدا (سمت چپ) و شروع مجدد (سمت راست)
+      // بعد از توقف: نمایش دکمه ادامه‌ی صدا (سمت چپ) و شروع مجدد (سمت راست)
       playButton.style.display = 'none';
       stopButton.style.display = 'none';
       continueButton.style.display = 'inline-block';
       restartButton.style.display = 'inline-block';
-      // متن ادامه را مطمئناً از ابتدا نزن?م؛ ادامه‌? دق?ق از pauseTime انجام م?‌شود
+      // متن ادامه را مطمئناً از ابتدا نزنیم؛ ادامه‌ی دقیق از pauseTime انجام می‌شود
     }
 
     function continueAudio(){
-      // ادامه از همان جا?? که متوقف شد
+      // ادامه از همان جایی که متوقف شد
       audio.currentTime = pauseTime || 0;
       audio.play();
       playButton.style.display = 'none';
@@ -187,7 +187,7 @@
     }
 
     audio.addEventListener('ended', () => {
-      // وقت? تموم شد: show restart (سمت راست) و play به حالت شن?دن دوباره
+      // وقتی تموم شد: show restart (سمت راست) و play به حالت شنیدن دوباره
       playButton.style.display = 'inline-block';
       playButton.textContent = 'شنيدن دوباره';
       playButton.disabled = false;
@@ -197,8 +197,8 @@
       pauseTime = 0;
     });
 
-    // اطم?نان: همه‌? متن‌ها از ? فارس? استفاده کنند
-    // (ا?ن کامنت صرفاً برا? اطلاع است؛ در کد بالا همه ?‌ها بصورت صح?ح وارد شده‌اند)
+    // اطمینان: همه‌ی متن‌ها از ی فارسی استفاده کنند
+    // (این کامنت صرفاً برای اطلاع است؛ در کد بالا همه ی‌ها بصورت صحیح وارد شده‌اند)
   </script>
 </body>
 </html>
