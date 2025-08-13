@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="utf-8" />
+  <title>Ó?á</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    :root{
+      --main:#009688;
+      --main-dark:#00796b;
+    }
+
+    body{
+      direction: rtl;
+      margin:0;
+      font-family: "Tahoma","Vazirmatn",sans-serif;
+      background: linear-gradient(to bottom,#e0f7fa,#ffffff);
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:30px;
+    }
+
+    .container{
+      width:100%;
+      max-width:720px;
+      background: rgba(255,255,255,0.92);
+      border-radius:16px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.12);
+      padding:36px;
+      text-align:center;
+    }
+
+    /* ÚäæÇä ÈÇáÇ? ÕİÍå (ËÇÈÊ¡ ÈÏæä Çä?ã?Ôä) */
+    #sigolText{
+      font-size:64px;           /* ÓÇ?Ò ÈÒÑÊÑ ÈÑÇ? ãæÈÇ?á æ ÏÓ˜ÊÇ */
+      color: #00796b;
+      margin:0 0 26px 0;
+      user-select:none;
+    }
+
+    /* ÊÕæ?Ñ (ÈÚÏ ÇÒ 3 ËÇä?å ÙÇåÑ ã?ÔæÏ) */
+    img{
+      width:100%;
+      border-radius:14px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.12);
+      transform: scale(0.85);
+      opacity:0;
+      transition: transform 450ms ease, opacity 450ms ease;
+      margin-bottom:30px;
+    }
+
+    /* Ñæå Ï˜ãååÇ ÏÑ ?˜ ÑÏ?İ¡ İÇÕáå È?ä ÇÏÇãå æ ÔÑæÚ ãÌÏÏ */
+    .button-group{
+      display:flex;
+      gap:16px;
+      justify-content:space-between; /* ÇÏÇãå ÓãÊ ¡ ÔÑæÚ ãÌÏÏ ÓãÊ ÑÇÓÊ */
+      max-width:520px;
+      margin:0 auto;
+      opacity:0;
+      pointer-events:none;
+      transition: opacity 260ms ease;
+    }
+
+    /* Ï˜ãååÇ ÈáäÏÊÑ æ ÎæÇäÇ */
+    .button-group button{
+      flex:1;
+      min-height:64px;            /* ÈáäÏ? Ï˜ãå */
+      padding:12px 18px;          /* İÇÕáå ÏÇÎá? ÇİŞ?/ÚãæÏ? */
+      font-size:20px;            /* ˜ã? ÈÒÑÊÑ */
+      border-radius:12px;
+      border: none;
+      background: var(--main);
+      color:#fff;
+      cursor:pointer;
+      transition: background 200ms ease, transform 120ms ease;
+      line-height:1;             /* ÈÑÇ? ÊÑÇÒ ÚãæÏ? ÈåÊÑ */
+    }
+
+    .button-group button:hover{ background: var(--main-dark); transform: translateY(-2px); }
+
+    /* æŞÊ? active ÔÏ¡ ÊÕæ?Ñ æ Ï˜ãååÇ äãÇ?Çä ã?Ôä */
+    .active img{ opacity:1; transform: scale(1); }
+    .active .button-group{ opacity:1; pointer-events:auto; }
+
+    /* Ï˜ãå ÊæŞİ ÑÇ ãÎİ? ã?˜ä?ã ÊÇ İŞØ ÈÓÊå Èå æÖÚ?Ê äãÇ?Ô ÏÇÏå ÔæÏ */
+    #stopButton{ display:none; }
+
+    /* ÍÇáÊ æÇ˜äÔÑÇ: ÏÑ ãæÈÇ?á İæäÊ æ ÇäÏÇÒå Ï˜ãå åÇ ˜ã? ˜ãÊÑ ÔæÏ */
+    @media (max-width:420px){
+      #sigolText{ font-size:48px; margin-bottom:18px; }
+      .button-group button{ min-height:56px; font-size:18px; padding:10px 12px; }
+      .container{ padding:24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- ÚäæÇä ÈÇáÇ? ÕİÍåº ÇÒ ÒöÑæ-æÇ?Ï-äæ-Ìæ?öäÑ È?ä Ó? æ á ÇÓÊİÇÏå ÔÏå -->
+    <h1 id="sigolText">Ó?á</h1>
+
+    <!-- ÊÕæ?Ñ: ÇÈÊÏÇ ãÎİ?¡ ÈÚÏ ÇÒ 3 ËÇä?å ÈÇ Òæã Èå äãÇ?Ô ÏÑã?Â?Ï -->
+    <img id="heroImg" src="https://atadn11.github.io/bbb/img.jpg" alt="Ó?á">
+
+    <!-- Ñæå Ï˜ãååÇ: ÊÑÊ?È ÏÑ DOM Èå Ç?ä Ô˜áå ˜å æŞÊ? ÊæŞİ Ñæ ã?Òä?ã¡
+         ÇÏÇãå (ÓãÊ ) æ ÔÑæÚ ãÌÏÏ (ÓãÊ ÑÇÓÊ) Èå ÕæÑÊ ŞÇÈá ˜á?˜ ÈÇŞ? ã?ãæää -->
+    <div class="button-group" id="buttonGroup">
+      <button id="continueButton" onclick="continueAudio()">ÇÏÇãå? ÕÏÇ</button>
+      <button id="playButton" onclick="playAudio()">ÔäíÏä ÕÏÇ</button>
+      <button id="stopButton" onclick="stopAudio()">ÊæŞİ ÕÏÇ</button>
+      <button id="restartButton" onclick="restartAudio()">ÔÑæÚ ãÌÏÏ</button>
+    </div>
+  </div>
+
+  <audio id="audio">
+    <source src="https://atadn11.github.io/bbb/music.mp3" type="audio/mpeg">
+    ãÑæÑÑ ÔãÇ ÇÒ ÎÔ ÕÏÇ ÔÊ?ÈÇä? äã?˜äÏ.
+  </audio>
+
+  <script>
+    // ÊæÌå: åãå? ãÊäåÇ? İÇÑÓ? ÈÇ ÍÑİ ? İÇÑÓ? (U+06CC) äæÔÊå ÔÏåÇäÏ
+    const container = document.querySelector('.container');
+    const buttonGroup = document.getElementById('buttonGroup');
+    const heroImg = document.getElementById('heroImg');
+
+    const playButton = document.getElementById('playButton');
+    const stopButton = document.getElementById('stopButton');
+    const continueButton = document.getElementById('continueButton');
+    const restartButton = document.getElementById('restartButton');
+    const audio = document.getElementById('audio');
+
+    let pauseTime = 0;
+
+    // ÇÈÊÏÇ İŞØ play (Ôä?Ïä ÕÏÇ) ŞÇÈá ãÔÇåÏå ÈÇÔÏ — ÈŞ?å ÈÇ JS ˜äÊÑá ã?Ôå
+    // (ÙÇåÑÔÏä Ñæå Ï˜ãååÇ æ ÊÕæ?Ñ ÈÚÏ ÇÒ 3 ËÇä?å)
+    setTimeout(() => {
+      container.classList.add('active');
+      // äãÇ?Ô Çæá?å: İŞØ Ï˜ãå? Ôä?Ïä İÚÇá ÈÇÔå
+      playButton.style.display = 'inline-block';
+      stopButton.style.display = 'none';
+      continueButton.style.display = 'none';
+      restartButton.style.display = 'none';
+    }, 3000);
+
+    // Úãá˜ÑÏåÇ
+    function playAudio(){
+      // æŞÊ? Ôä?Ïä ÕÏÇ ˜á?˜ ÔÏ¡ ÇÒ ÌÇ? ÊæŞİ ŞÈá? ÇÏÇãå ÈÏå
+      audio.currentTime = pauseTime || 0;
+      audio.play().catch(()=>{/* ÈÑÎ? ãÑæÑÑåÇ ãã˜äå Ìáæ? autoplay È?Ñä */});
+      playButton.style.display = 'none';
+      stopButton.style.display = 'inline-block';
+      continueButton.style.display = 'none';
+      restartButton.style.display = 'none';
+    }
+
+    function stopAudio(){
+      audio.pause();
+      pauseTime = audio.currentTime;
+      // ÈÚÏ ÇÒ ÊæŞİ: äãÇ?Ô Ï˜ãå ÇÏÇãå? ÕÏÇ (ÓãÊ ) æ ÔÑæÚ ãÌÏÏ (ÓãÊ ÑÇÓÊ)
+      playButton.style.display = 'none';
+      stopButton.style.display = 'none';
+      continueButton.style.display = 'inline-block';
+      restartButton.style.display = 'inline-block';
+      // ãÊä ÇÏÇãå ÑÇ ãØãÆäÇğ ÇÒ ÇÈÊÏÇ äÒä?ãº ÇÏÇãå? ÏŞ?Ş ÇÒ pauseTime ÇäÌÇã ã?ÔæÏ
+    }
+
+    function continueAudio(){
+      // ÇÏÇãå ÇÒ åãÇä ÌÇ?? ˜å ãÊæŞİ ÔÏ
+      audio.currentTime = pauseTime || 0;
+      audio.play();
+      playButton.style.display = 'none';
+      stopButton.style.display = 'inline-block';
+      continueButton.style.display = 'none';
+      restartButton.style.display = 'none';
+    }
+
+    function restartAudio(){
+      pauseTime = 0;
+      audio.currentTime = 0;
+      audio.play();
+      playButton.style.display = 'none';
+      stopButton.style.display = 'inline-block';
+      continueButton.style.display = 'none';
+      restartButton.style.display = 'none';
+    }
+
+    audio.addEventListener('ended', () => {
+      // æŞÊ? Êãæã ÔÏ: show restart (ÓãÊ ÑÇÓÊ) æ play Èå ÍÇáÊ Ôä?Ïä ÏæÈÇÑå
+      playButton.style.display = 'inline-block';
+      playButton.textContent = 'ÔäíÏä ÏæÈÇÑå';
+      playButton.disabled = false;
+      stopButton.style.display = 'none';
+      continueButton.style.display = 'none';
+      restartButton.style.display = 'inline-block';
+      pauseTime = 0;
+    });
+
+    // ÇØã?äÇä: åãå? ãÊäåÇ ÇÒ ? İÇÑÓ? ÇÓÊİÇÏå ˜ääÏ
+    // (Ç?ä ˜ÇãäÊ ÕÑİÇğ ÈÑÇ? ÇØáÇÚ ÇÓÊº ÏÑ ˜Ï ÈÇáÇ åãå ?åÇ ÈÕæÑÊ ÕÍ?Í æÇÑÏ ÔÏåÇäÏ)
+  </script>
+</body>
+</html>
