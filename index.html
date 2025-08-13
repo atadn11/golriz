@@ -2,7 +2,7 @@
 <html lang="fa">
 <head>
   <meta charset="utf-8" />
-  <title>ำ?แ</title>
+  <title>ุณ?โ€ฺฏู</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <style>
     :root{
@@ -32,15 +32,15 @@
       text-align:center;
     }
 
-    /* ฺไๆวไ ศวแว? ีÝอๅ (หวศสก ศฯๆไ วไ?ใ?ิไ) */
+    /* ุนููุงู ุจุงูุง? ุตูุญู (ุซุงุจุชุ ุจุฏูู ุงู?ู…?ุดู) */
     #sigolText{
-      font-size:64px;           /* ำว?า ศาัสั ศัว? ใๆศว?แ ๆ ฯำสว */
+      font-size:64px;           /* ุณุง?ุฒ ุจุฒุฑฺฏโ€ุชุฑ ุจุฑุง? ู…ูุจุง?ู ู ุฏุณฺฉุชุงูพ */
       color: #00796b;
       margin:0 0 26px 0;
       user-select:none;
     }
 
-    /* สีๆ?ั (ศฺฯ วา 3 หวไ?ๅ ูวๅั ใ?ิๆฯ) */
+    /* ุชุตู?ุฑ (ุจุนุฏ ุงุฒ 3 ุซุงู?ู ุธุงูุฑ ู…?โ€ุดูุฏ) */
     img{
       width:100%;
       border-radius:14px;
@@ -51,11 +51,11 @@
       margin-bottom:30px;
     }
 
-    /* ัๆๅ ฯใๅๅว ฯั ? ัฯ?Ýก Ýวีแๅ ศ?ไ วฯวใๅ ๆ ิัๆฺ ใฬฯฯ */
+    /* ฺฏุฑูู ุฏฺฉู…ูโ€ูุง ุฏุฑ ?ฺฉ ุฑุฏ?ูุ ูุงุตูู ุจ?ู ุงุฏุงู…ู ู ุดุฑูุน ู…ุฌุฏุฏ */
     .button-group{
       display:flex;
       gap:16px;
-      justify-content:space-between; /* วฯวใๅ ำใส ก ิัๆฺ ใฬฯฯ ำใส ัวำส */
+      justify-content:space-between; /* ุงุฏุงู…ู ุณู…ุช ฺูพุ ุดุฑูุน ู…ุฌุฏุฏ ุณู…ุช ุฑุงุณุช */
       max-width:520px;
       margin:0 auto;
       opacity:0;
@@ -63,31 +63,31 @@
       transition: opacity 260ms ease;
     }
 
-    /* ฯใๅๅว ศแไฯสั ๆ ฮๆวไว */
+    /* ุฏฺฉู…ูโ€ูุง ุจููุฏุชุฑ ู ุฎูุงูุง */
     .button-group button{
       flex:1;
-      min-height:64px;            /* ศแไฯ? ฯใๅ */
-      padding:12px 18px;          /* Ýวีแๅ ฯวฮแ? วÝÞ?/ฺใๆฯ? */
-      font-size:20px;            /* ใ? ศาัสั */
+      min-height:64px;            /* ุจููุฏ? ุฏฺฉู…ู */
+      padding:12px 18px;          /* ูุงุตูู ุฏุงุฎู? ุงูู?/ุนู…ูุฏ? */
+      font-size:20px;            /* ฺฉู…? ุจุฒุฑฺฏโ€ุชุฑ */
       border-radius:12px;
       border: none;
       background: var(--main);
       color:#fff;
       cursor:pointer;
       transition: background 200ms ease, transform 120ms ease;
-      line-height:1;             /* ศัว? สัวา ฺใๆฯ? ศๅสั */
+      line-height:1;             /* ุจุฑุง? ุชุฑุงุฒ ุนู…ูุฏ? ุจูุชุฑ */
     }
 
     .button-group button:hover{ background: var(--main-dark); transform: translateY(-2px); }
 
-    /* ๆÞส? active ิฯก สีๆ?ั ๆ ฯใๅๅว ไใว?วไ ใ?ิไ */
+    /* ููุช? active ุดุฏุ ุชุตู?ุฑ ู ุฏฺฉู…ูโ€ูุง ูู…ุง?ุงู ู…?ุดู */
     .active img{ opacity:1; transform: scale(1); }
     .active .button-group{ opacity:1; pointer-events:auto; }
 
-    /* ฯใๅ สๆÞÝ ัว ใฮÝ? ใ?ไ?ใ สว ÝÞุ ศำสๅ ศๅ ๆึฺ?ส ไใว?ิ ฯวฯๅ ิๆฯ */
+    /* ุฏฺฉู…ู ุชููู ุฑุง ู…ุฎู? ู…?โ€ฺฉู?ู… ุชุง ููุท ุจุณุชู ุจู ูุถุน?ุช ูู…ุง?ุด ุฏุงุฏู ุดูุฏ */
     #stopButton{ display:none; }
 
-    /* อวแส ๆวไิัว: ฯั ใๆศว?แ Ýๆไส ๆ วไฯวาๅ ฯใๅ ๅว ใ? ใสั ิๆฯ */
+    /* ุญุงูุช ูุงฺฉูุดฺฏุฑุง: ุฏุฑ ู…ูุจุง?ู ูููุช ู ุงูุฏุงุฒู ุฏฺฉู…ู ูุง ฺฉู…? ฺฉู…ุชุฑ ุดูุฏ */
     @media (max-width:420px){
       #sigolText{ font-size:48px; margin-bottom:18px; }
       .button-group button{ min-height:56px; font-size:18px; padding:10px 12px; }
@@ -98,29 +98,29 @@
 <body>
 
   <div class="container">
-    <!-- ฺไๆวไ ศวแว? ีÝอๅบ วา า๖ัๆ-ๆว?ฯ-ไๆ-ฬๆ?๖ไั ศ?ไ ำ? ๆ แ วำสÝวฯๅ ิฯๅ -->
-    <h1 id="sigolText">ำ?แ</h1>
+    <!-- ุนููุงู ุจุงูุง? ุตูุญูุ ุงุฒ ุฒูุฑู-ูุง?ุฏ-ูู-ุฌู?ููุฑ ุจ?ู ุณ? ู ฺฏู ุงุณุชูุงุฏู ุดุฏู -->
+    <h1 id="sigolText">ุณ?โ€ฺฏู</h1>
 
-    <!-- สีๆ?ั: วศสฯว ใฮÝ?ก ศฺฯ วา 3 หวไ?ๅ ศว าๆใ ศๅ ไใว?ิ ฯัใ?ย?ฯ -->
-    <img id="heroImg" src="https://atadn11.github.io/bbb/img.jpg" alt="ำ?แ">
+    <!-- ุชุตู?ุฑ: ุงุจุชุฏุง ู…ุฎู?ุ ุจุนุฏ ุงุฒ 3 ุซุงู?ู ุจุง ุฒูู… ุจู ูู…ุง?ุด ุฏุฑู…?โ€ุข?ุฏ -->
+    <img id="heroImg" src="https://atadn11.github.io/golriz/img.jpg" alt="ุณ?โ€ฺฏู">
 
-    <!-- ัๆๅ ฯใๅๅว: สัส?ศ ฯั DOM ศๅ ว?ไ ิแๅ ๅ ๆÞส? สๆÞÝ ัๆ ใ?าไ?ใก
-         วฯวใๅ (ำใส ) ๆ ิัๆฺ ใฬฯฯ (ำใส ัวำส) ศๅ ีๆัส Þวศแ แ? ศวÞ? ใ?ใๆไไ -->
+    <!-- ฺฏุฑูู ุฏฺฉู…ูโ€ูุง: ุชุฑุช?ุจ ุฏุฑ DOM ุจู ุง?ู ุดฺฉูู ฺฉู ููุช? ุชููู ุฑู ู…?โ€ุฒู?ู…ุ
+         ุงุฏุงู…ู (ุณู…ุช ฺูพ) ู ุดุฑูุน ู…ุฌุฏุฏ (ุณู…ุช ุฑุงุณุช) ุจู ุตูุฑุช ูุงุจู ฺฉู?ฺฉ ุจุงู? ู…?โ€ู…ููู -->
     <div class="button-group" id="buttonGroup">
-      <button id="continueButton" onclick="continueAudio()">วฯวใๅ? ีฯว</button>
-      <button id="playButton" onclick="playAudio()">ิไํฯไ ีฯว</button>
-      <button id="stopButton" onclick="stopAudio()">สๆÞÝ ีฯว</button>
-      <button id="restartButton" onclick="restartAudio()">ิัๆฺ ใฬฯฯ</button>
+      <button id="continueButton" onclick="continueAudio()">ุงุฏุงู…ูโ€? ุตุฏุง</button>
+      <button id="playButton" onclick="playAudio()">ุดููุฏู ุตุฏุง</button>
+      <button id="stopButton" onclick="stopAudio()">ุชููู ุตุฏุง</button>
+      <button id="restartButton" onclick="restartAudio()">ุดุฑูุน ู…ุฌุฏุฏ</button>
     </div>
   </div>
 
   <audio id="audio">
-    <source src="https://atadn11.github.io/bbb/music.mp3" type="audio/mpeg">
-    ใัๆัั ิใว วา ฮิ ีฯว ิส?ศวไ? ไใ?ไฯ.
+    <source src="https://atadn11.github.io/golriz/music.mp3" type="audio/mpeg">
+    ู…ุฑูุฑฺฏุฑ ุดู…ุง ุงุฒ ูพุฎุด ุตุฏุง ูพุดุช?ุจุงู? ูู…?โ€ฺฉูุฏ.
   </audio>
 
   <script>
-    // สๆฬๅ: ๅใๅ? ใสไๅว? Ýวัำ? ศว อัÝ ? Ýวัำ? (U+06CC) ไๆิสๅ ิฯๅวไฯ
+    // ุชูุฌู: ูู…ูโ€? ู…ุชูโ€ูุง? ูุงุฑุณ? ุจุง ุญุฑู ? ูุงุฑุณ? (U+06CC) ููุดุชู ุดุฏูโ€ุงูุฏ
     const container = document.querySelector('.container');
     const buttonGroup = document.getElementById('buttonGroup');
     const heroImg = document.getElementById('heroImg');
@@ -133,22 +133,22 @@
 
     let pauseTime = 0;
 
-    // วศสฯว ÝÞุ play (ิไ?ฯไ ีฯว) Þวศแ ใิวๅฯๅ ศวิฯ — ศÞ?ๅ ศว JS ไสัแ ใ?ิๅ
-    // (ูวๅัิฯไ ัๆๅ ฯใๅๅว ๆ สีๆ?ั ศฺฯ วา 3 หวไ?ๅ)
+    // ุงุจุชุฏุง ููุท play (ุดู?ุฏู ุตุฏุง) ูุงุจู ู…ุดุงูุฏู ุจุงุดุฏ โ€” ุจู?ู ุจุง JS ฺฉูุชุฑู ู…?ุดู
+    // (ุธุงูุฑุดุฏู ฺฏุฑูู ุฏฺฉู…ูโ€ูุง ู ุชุตู?ุฑ ุจุนุฏ ุงุฒ 3 ุซุงู?ู)
     setTimeout(() => {
       container.classList.add('active');
-      // ไใว?ิ วๆแ?ๅ: ÝÞุ ฯใๅ? ิไ?ฯไ Ýฺวแ ศวิๅ
+      // ูู…ุง?ุด ุงูู?ู: ููุท ุฏฺฉู…ูโ€? ุดู?ุฏู ูุนุงู ุจุงุดู
       playButton.style.display = 'inline-block';
       stopButton.style.display = 'none';
       continueButton.style.display = 'none';
       restartButton.style.display = 'none';
     }, 3000);
 
-    // ฺใแัฯๅว
+    // ุนู…ูฺฉุฑุฏูุง
     function playAudio(){
-      // ๆÞส? ิไ?ฯไ ีฯว แ? ิฯก วา ฬว? สๆÞÝ Þศแ? วฯวใๅ ศฯๅ
+      // ููุช? ุดู?ุฏู ุตุฏุง ฺฉู?ฺฉ ุดุฏุ ุงุฒ ุฌุง? ุชููู ูุจู? ุงุฏุงู…ู ุจุฏู
       audio.currentTime = pauseTime || 0;
-      audio.play().catch(()=>{/* ศัฮ? ใัๆััๅว ใใไๅ ฬแๆ? autoplay ศ?ัไ */});
+      audio.play().catch(()=>{/* ุจุฑุฎ? ู…ุฑูุฑฺฏุฑูุง ู…ู…ฺฉูู ุฌูู? autoplay ุจฺฏ?ุฑู */});
       playButton.style.display = 'none';
       stopButton.style.display = 'inline-block';
       continueButton.style.display = 'none';
@@ -158,16 +158,16 @@
     function stopAudio(){
       audio.pause();
       pauseTime = audio.currentTime;
-      // ศฺฯ วา สๆÞÝ: ไใว?ิ ฯใๅ วฯวใๅ? ีฯว (ำใส ) ๆ ิัๆฺ ใฬฯฯ (ำใส ัวำส)
+      // ุจุนุฏ ุงุฒ ุชููู: ูู…ุง?ุด ุฏฺฉู…ู ุงุฏุงู…ูโ€? ุตุฏุง (ุณู…ุช ฺูพ) ู ุดุฑูุน ู…ุฌุฏุฏ (ุณู…ุช ุฑุงุณุช)
       playButton.style.display = 'none';
       stopButton.style.display = 'none';
       continueButton.style.display = 'inline-block';
       restartButton.style.display = 'inline-block';
-      // ใสไ วฯวใๅ ัว ใุใฦไว๐ วา วศสฯว ไาไ?ใบ วฯวใๅ? ฯÞ?Þ วา pauseTime วไฬวใ ใ?ิๆฯ
+      // ู…ุชู ุงุฏุงู…ู ุฑุง ู…ุทู…ุฆูุงู ุงุฒ ุงุจุชุฏุง ูุฒู?ู…ุ ุงุฏุงู…ูโ€? ุฏู?ู ุงุฒ pauseTime ุงูุฌุงู… ู…?โ€ุดูุฏ
     }
 
     function continueAudio(){
-      // วฯวใๅ วา ๅใวไ ฬว?? ๅ ใสๆÞÝ ิฯ
+      // ุงุฏุงู…ู ุงุฒ ูู…ุงู ุฌุง?? ฺฉู ู…ุชููู ุดุฏ
       audio.currentTime = pauseTime || 0;
       audio.play();
       playButton.style.display = 'none';
@@ -187,9 +187,9 @@
     }
 
     audio.addEventListener('ended', () => {
-      // ๆÞส? สใๆใ ิฯ: show restart (ำใส ัวำส) ๆ play ศๅ อวแส ิไ?ฯไ ฯๆศวัๅ
+      // ููุช? ุชู…ูู… ุดุฏ: show restart (ุณู…ุช ุฑุงุณุช) ู play ุจู ุญุงูุช ุดู?ุฏู ุฏูุจุงุฑู
       playButton.style.display = 'inline-block';
-      playButton.textContent = 'ิไํฯไ ฯๆศวัๅ';
+      playButton.textContent = 'ุดููุฏู ุฏูุจุงุฑู';
       playButton.disabled = false;
       stopButton.style.display = 'none';
       continueButton.style.display = 'none';
@@ -197,8 +197,8 @@
       pauseTime = 0;
     });
 
-    // วุใ?ไวไ: ๅใๅ? ใสไๅว วา ? Ýวัำ? วำสÝวฯๅ ไไฯ
-    // (ว?ไ วใไส ีัÝว๐ ศัว? วุแวฺ วำสบ ฯั ฯ ศวแว ๅใๅ ?ๅว ศีๆัส ีอ?อ ๆวัฯ ิฯๅวไฯ)
+    // ุงุทู…?ูุงู: ูู…ูโ€? ู…ุชูโ€ูุง ุงุฒ ? ูุงุฑุณ? ุงุณุชูุงุฏู ฺฉููุฏ
+    // (ุง?ู ฺฉุงู…ูุช ุตุฑูุงู ุจุฑุง? ุงุทูุงุน ุงุณุชุ ุฏุฑ ฺฉุฏ ุจุงูุง ูู…ู ?โ€ูุง ุจุตูุฑุช ุตุญ?ุญ ูุงุฑุฏ ุดุฏูโ€ุงูุฏ)
   </script>
 </body>
 </html>
